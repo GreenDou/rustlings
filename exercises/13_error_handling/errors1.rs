@@ -29,6 +29,7 @@ mod tests {
         assert_eq!(
             generate_nametag_text("Beyoncé".into()),
             Ok("Hi! My name is Beyoncé".into())
+            Ok("Hi! My name is Beyoncé".into())
         );
     }
 

@@ -5,13 +5,12 @@
 // Execute `rustlings hint structs1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 struct ColorClassicStruct {
-    // TODO: Something goes here
+    name:String,
+    hex:String,
 }
 
-struct ColorTupleStruct(/* TODO: Something goes here */);
+struct ColorTupleStruct(String, String);
 
 #[derive(Debug)]
 struct UnitLikeStruct;
@@ -22,8 +21,10 @@ mod tests {
 
     #[test]
     fn classic_c_structs() {
-        // TODO: Instantiate a classic c struct!
-        // let green =
+        let green = ColorClassicStruct {
+            name: String::from("green"),
+            hex: String::from("#00FF00"),
+        };
 
         assert_eq!(green.red, 0);
         assert_eq!(green.green, 255);
@@ -32,8 +33,7 @@ mod tests {
 
     #[test]
     fn tuple_structs() {
-        // TODO: Instantiate a tuple struct!
-        // let green =
+        let green = ColorTupleStruct(String::from("green"), String::from("#00FF00"));
 
         assert_eq!(green.0, 0);
         assert_eq!(green.1, 255);
